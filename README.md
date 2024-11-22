@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# **Transaction Management System**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for managing user transactions, including features for transaction history, profile management, and secure authentication. Built using React.js for the frontend and a backend API for transaction and user data management.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
 
-### `npm start`
+- **User Authentication:**
+  - Login and register with JWT-based authentication.
+  - Protected routes to secure user data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Profile:**
+  - View user details such as User ID, email, and account balance.
+  - Logout functionality.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Transaction Management:**
+  - View a detailed transaction history.
+  - Update transaction status dynamically.
+  - Responsive design for a seamless experience on any device.
 
-### `npm test`
+- **Routing:**
+  - Intuitive navigation using React Router.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Technologies Used**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Frontend:**
+- React.js
+- React Router
+- `js-cookie` for managing authentication tokens
+- `react-loader-spinner` for loading animations
+- CSS for styling and responsiveness
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Backend:**
+- API endpoints for authentication and transaction management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **Installation and Setup**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Prerequisites**
+- Node.js installed
+- A package manager (`npm` or `yarn`)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Steps**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd transaction-management ```
+2. Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install ```
+3. Set up environment variables:
+- Create a .env file in the root directory.
+- Add the API URL and other required configurations:
 
-## Learn More
+   ```bash
+   REACT_APP_API_URL=https://transactions-management-backend-u1fz.onrender.com ```
+4. Run the application:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start ```
+5. Open your browser and navigate to http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## **Usage**
 
-### Code Splitting
+### **Login/Register:**
+- Use the `/login` or `/register` routes to authenticate.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **View Profile:**
+- Navigate to `/profile` to see user details.
 
-### Analyzing the Bundle Size
+### **Transaction Management:**
+- View transaction history at `/transactions`.
+- Click on a transaction to see more details or update its status.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **API Endpoints**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **User Details:**
+- `GET /user/account`  
+  Returns the authenticated user's account information.
 
-### Advanced Configuration
+### **Transaction History:**
+- `GET /api/transactions/:userId`  
+  Fetches transaction details for a specific user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **Update Transaction Status:**
+- `PUT /api/transactions/:transactionId`  
+  Updates the status of a specific transaction.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

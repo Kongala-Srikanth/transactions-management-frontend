@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import {Switch, Route, Redirect} from 'react-router-dom'
+import TransactionHistory from './components/TransactionHistory'
+import TransactionFullDetails from './components/TransactionFullDetails'
+import Login from './components/Login'
+import Register from './components/Register'
+import CreateTransaction from './components/CreateTransaction'
+import UserProfile from './components/UserProfile'
+import ProtectedRoute from './components/ProtectedRoute'
+import Home from './components/Home'
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/register' component={Register} />
+      <ProtectedRoute exact path='/' component={Home} />
+      <ProtectedRoute exact path='/profile' component={UserProfile} />
+      <ProtectedRoute exact path='/transaction/details/:id' component={TransactionFullDetails} />
+      <ProtectedRoute exact path='/transaction' component={CreateTransaction} />
+      <ProtectedRoute exact path='/transactions' component={TransactionHistory} />
+    </Switch>
   );
 }
 

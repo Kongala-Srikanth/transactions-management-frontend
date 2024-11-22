@@ -1,0 +1,141 @@
+.user-profile-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile {
+    padding: 16px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.user-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.user-logo {
+    background-color: #6200ea;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-details {
+    text-align: left;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.user-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+}
+
+.value {
+    color: #333;
+}
+
+.user-detail:last-child {
+    border-bottom: none;
+}
+
+.logout-button {
+    margin-top: 24px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.user-id{
+    width: 200px;
+}
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.error-content {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-content h1 {
+    font-size: 60px;
+    margin: 0;
+    color: #ff4d4d;
+}
+
+.error-content h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.error-content p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #555;
+}
+
+.error-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-content button:hover {
+    background-color: #0056b3;
+}
